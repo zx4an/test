@@ -114,10 +114,10 @@ def main() -> None:
         player2_card = find_card_for_player2(cards_on_table, second_player_hand)
 
         if player2_card is None:
-            print("Игрок 2: Не смог подкинуть\n\nИгрок 1 выиграл.")
+            print("Игрок 2: Не смог покрыть\n\nИгрок 1 выиграл.")
             break
         else:
-            print(f"Игрок 2: {player2_card.to_str()}")
+            print(f"Игрок 2: {player2_card.to_str()} (покрыл)")
             use_card(player2_card, cards_on_table, second_player_hand)
 
         print(f'\nУ первого игрока осталось: {" ".join(card.to_str() for card in first_player_hand)}')
